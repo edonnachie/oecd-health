@@ -61,8 +61,8 @@ oecd_amputation |>
   labs(
     title = "OECD Countries Still Struggle With Diabetes Care",
     subtitle = "Rate of diabetes-related ampuation of the toe, foot and leg<br />in the
-    <span style='color:#E41A1C;'>__male__</span> and
-    <span style='color:#377EB8;'>__female__</span> population (age 15+)
+    <span style='color:#E41A1C;'>__female__</span> and
+    <span style='color:#377EB8;'>__male__</span> population (age 15+)
     ",
     x = lab_stat$Statistic[lab_stat$VAL == "AS_STD_RATE_MPOP"],
     y = "",
@@ -79,5 +79,5 @@ oecd_amputation |>
     axis.title.x = element_text(size = 12, family = "lato")
   )
 ggsave(filename = "plots/oecd_amputation.png",
-       type = "cairo",
+       type = "cairo", bg = "white",
        width = 20, height = 15, units = "cm", dpi = 300)
