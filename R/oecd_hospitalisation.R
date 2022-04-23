@@ -59,7 +59,9 @@ oecd_plot <- function(indicator, dat, title = indicator) {
     geom_point(size = 2) +
     geom_errorbarh(alpha = 0.5) +
     geom_vline(xintercept = 0, colour = "grey80") +
-    scale_colour_brewer(type = "qual", palette = "Set1", guide = "none") +
+    scale_colour_manual(values = c("Male" = "#377EB8",
+                                   "Female" = "#E41A1C"),
+                        guide = "none") +
     labs(
       title = paste("OECD Indicator:", title),
       subtitle = "Standardised rates in the
